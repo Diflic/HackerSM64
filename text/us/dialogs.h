@@ -2070,17 +2070,16 @@ I'm out training now,\n\
 so come back later.\n\
 //--Koopa the Quick"))
 
-DEFINE_DIALOG(DIALOG_167, 1, 4, 30, 200, _("\
-Princess Toadstool's\n\
-castle is just ahead.\n\
+// this is the first bilboard text. The 
+DEFINE_DIALOG(DIALOG_167, 1, 4, 30, 200, _("\ 
+Wait...\n\
 \n\
 \n\
-Press [A] to jump, [Z] to\n\
-crouch, and [B] to punch,\n\
-read a sign, or grab\n\
-something.\n\
-Press [B] again to throw\n\
-something you're holding."))
+\n\
+This is a rom hack\n\
+\n\
+\n\
+\n\"))
 
 DEFINE_DIALOG(DIALOG_168, 1, 5, 30, 200, _("\
 Hey! Knock it off! That's\n\
