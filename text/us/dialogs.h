@@ -2070,16 +2070,13 @@ I'm out training now,\n\
 so come back later.\n\
 //--Koopa the Quick"))
 
-// this is the first bilboard text. The 
-DEFINE_DIALOG(DIALOG_167, 1, 4, 30, 200, _("\ 
+
+DEFINE_DIALOG(DIALOG_167, 1, 4, 30, 200, _("\
 Wait...\n\
 \n\
 \n\
 \n\
-This is a rom hack\n\
-\n\
-\n\
-\n\"))
+This is a rom hack."))
 
 DEFINE_DIALOG(DIALOG_168, 1, 5, 30, 200, _("\
 Hey! Knock it off! That's\n\
