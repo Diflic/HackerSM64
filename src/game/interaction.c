@@ -56,6 +56,7 @@ u32 interact_hoot          (struct MarioState *m, u32 interactType, struct Objec
 u32 interact_cap           (struct MarioState *m, u32 interactType, struct Object *obj);
 u32 interact_grabbable     (struct MarioState *m, u32 interactType, struct Object *obj);
 u32 interact_text          (struct MarioState *m, u32 interactType, struct Object *obj);
+u32 interact_text_blowup   (struct MarioState *m, u32 interactType, struct Object *obj);
 
 struct InteractionHandler {
     u32 interactType;
@@ -1791,6 +1792,21 @@ u32 interact_text(struct MarioState *m, UNUSED u32 interactType, struct Object *
 
     return interact;
 }
+
+u32 interact_text_blowup(struct MarioState *m, UNUSED u32 interactType, struct Object *obj) {
+    u32 interact = FALSE;
+
+    if (obj->oInteractionSubtype & INT_SUBTYPE_SIGN) {
+        interact = check_read_sign(m, obj);
+    } else if (obj->oInteractionSubtype & INT_SUBTYPE_NPC) {
+        interact = check_npc_talk(m, obj);
+    } else {
+        push_mario_out_of_object(m, obj, 2.0f);
+    }
+
+    return interact;
+}
+
 
 void check_kick_or_punch_wall(struct MarioState *m) {
     if (m->flags & (MARIO_PUNCHING | MARIO_KICKING | MARIO_TRIPPING)) {
